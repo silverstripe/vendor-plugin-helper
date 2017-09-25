@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\VendorHelper\Commands;
+namespace SilverStripe\VendorPluginHelper\Commands;
 
 use InvalidArgumentException;
 use SilverStripe\VendorPlugin\Methods\ExposeMethod;

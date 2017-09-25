@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/vendor-helper",
+    "name": "silverstripe/vendor-plugin-helper",
     "description": "Assists with linking vendor modules to the public webroot",
     "type": "library",
     "require": {
@@ -18,18 +18,12 @@
         }
     ],
     "bin": [
-        "bin/vendor-helper"
+        "bin/vendor-plugin-helper"
     ],
     "autoload": {
         "psr-4": {
-            "SilverStripe\\VendorHelper\\": "src/"
+            "SilverStripe\\VendorPluginHelper\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:open-sausages/vendor-plugin.git"
-        }
-    ]
+    "minimum-stability": "dev"
 }

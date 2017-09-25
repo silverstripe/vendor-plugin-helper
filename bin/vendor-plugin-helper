@@ -27,5 +27,5 @@ if (!$included) {
     throw new RuntimeException("Could not find autoload.php");
 }
 
-$app = new SilverStripe\VendorHelper\Application();
+$app = new SilverStripe\VendorPluginHelper\Application();
 $app->run();

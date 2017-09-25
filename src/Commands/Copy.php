@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\VendorHelper\Commands;
+namespace SilverStripe\VendorPluginHelper\Commands;
 
 use SilverStripe\VendorPlugin\Methods\CopyMethod;
 use SilverStripe\VendorPlugin\Methods\ExposeMethod;
