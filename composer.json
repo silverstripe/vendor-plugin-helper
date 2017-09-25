@@ -1,0 +1,35 @@
+{
+    "name": "silverstripe/vendor-helper",
+    "description": "Assists with linking vendor modules to the public webroot",
+    "type": "library",
+    "require": {
+        "symfony/console": "^3.3",
+        "silverstripe/vendor-plugin": "dev-master",
+        "composer/composer": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Damian Mooyman",
+            "email": "damian@silverstripe.com"
+        }
+    ],
+    "bin": [
+        "bin/vendor-helper"
+    ],
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\VendorHelper\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:open-sausages/vendor-plugin.git"
+        }
+    ]
+}
