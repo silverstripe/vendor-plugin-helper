@@ -38,10 +38,7 @@ abstract class Base extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // Get destination
-        $path = $input->getArgument('path') ?: getcwd();
-        if (!is_dir($path)) {
-            throw new InvalidArgumentException("invalid path argument \"{$path}\"");
-        }
+        $path = $this->getPath($input);
         $target = $input->getOption('target');
         if (empty($target)) {
             throw new InvalidArgumentException("Missing target directory");
@@ -103,5 +100,20 @@ abstract class Base extends Command
             }
         }
         return $modules;
+    }
+
+    /**
+     * Get absolute path to target folder to link
+     *
+     * @param InputInterface $input
+     * @return string
+     */
+    protected function getPath(InputInterface $input)
+    {
+        $path = $input->getArgument('path') ?: getcwd();
+        if (!is_dir($path)) {
+            throw new InvalidArgumentException("invalid path argument \"{$path}\"");
+        }
+        return realpath($path);
     }
 }
