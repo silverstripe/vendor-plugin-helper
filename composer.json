@@ -3,7 +3,7 @@
     "description": "Assists with linking vendor modules to the public webroot",
     "type": "library",
     "require": {
-        "composer/composer": "^1.2",
+        "composer/composer": "^1.5",
         "silverstripe/vendor-plugin": "^1.0",
         "symfony/console": "^3.3"
     },
