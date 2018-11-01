@@ -27,5 +27,10 @@ if (!$included) {
     throw new RuntimeException("Could not find autoload.php");
 }
 
-$app = new SilverStripe\VendorPluginHelper\Application();
-$app->run();
+$application = new Symfony\Component\Console\Application();
+$application->setName("SilverStripe vendor-plugin-helper");
+$application->setVersion('1.1.0');
+$application->add(new SilverStripe\VendorPluginHelper\Commands\VendorExposeCommand);
+$application->add(new SilverStripe\VendorPluginHelper\Commands\Copy());
+$application->add(new SilverStripe\VendorPluginHelper\Commands\Link());
+$application->run();
