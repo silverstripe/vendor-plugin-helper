@@ -2,24 +2,25 @@
 
 namespace SilverStripe\VendorPluginHelper\Commands;
 
-use SilverStripe\VendorPlugin\Methods\CopyMethod;
-use SilverStripe\VendorPlugin\Methods\ExposeMethod;
-
+/**
+ * Expose resource with the copy method
+ * @deprecated 1.0.0..2.0.0
+ */
 class Copy extends Base
 {
     public function __construct()
     {
         parent::__construct('copy');
-        $this->setDescription('Copy all vendor web-visible assets to the given target');
+        $this->setDescription(
+            'This method as been deprecated. Use vendor-expose instead. ' .
+            'Copy all vendor web-visible assets to the given target.');
     }
 
     /**
      * Activate components using the give method
-     *
-     * @return ExposeMethod
      */
     protected function getMethod()
     {
-        return new CopyMethod();
+        return 'copy';
     }
 }
